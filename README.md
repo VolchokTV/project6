@@ -1,1 +1,1 @@
-Посмотреть проект: https://julianotes.github.io/toxin-hotel/
+Посмотреть проект: https://volchoktv.github.io/maket/
