@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "homepage": "https://julianotes.github.io/toxin-hotel",
+  "homepage": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.pug --open",
@@ -12,8 +12,8 @@
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "<avbavnn@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@parcel/optimizer-cssnano": "^2.0.0-alpha.2",
     "autoprefixer": "^9.6.5",
