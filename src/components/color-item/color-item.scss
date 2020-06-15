@@ -1,0 +1,38 @@
+@import "/base/scss/base.scss";
+@import "/base/scss/variables.scss";
+@import "/base/scss/mixins.scss";
+
+
+.color-item {
+  @include flex(row, flex-start, center);
+  margin-bottom: 20px;
+
+  @media (max-width: 375px) {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.color-item__color {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background-color: $primary-color;
+  margin-right: 40px;
+  
+  @media (max-width: 450px){
+    margin-right:0;
+  }
+}
+
+.color-item__name {
+  @include h2Style;
+  line-height: 29px;
+}
+
+.color-item__number {
+  @include h2Style;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+

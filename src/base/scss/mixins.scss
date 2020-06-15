@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content};
+    :-moz-placeholder {@content};
+    ::-moz-placeholder {@content};
+    ::-ms-input-placeholder {@content};
+}
+
+@mixin changeColor($opacity) {
+  color: $primary-color;
+  opacity: $opacity;
+}
+
+@mixin h1Style {
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: $primary-color;
+    @media(max-width: 414px) {
+    font-size: 1.375rem;
+    }
+}
+
+@mixin h2Style {
+  font-family: $secondFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 19px;
+  line-height:24px;
+  color: $primary-color; 
+}
+
+@mixin h3Style {
+  font-family: $mainFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 15px;
+  color: $primary-color;
+  text-transform: uppercase; 
+}
+
+@mixin bodyFont {
+  font-family: $mainFont; 
+  font-style: normal; 
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSz;
+  line-height: $mainLineHeight;
+  color:$primary-color;
+  opacity: 0.75;
+}
+
+@mixin h2RuFont {
+  font-family: $ruFont; 
+  font-style: normal; 
+  font-weight: 700;
+  font-size: 1.3571428571428572rem;
+  line-height:24px;
+  color: $primary-color; 
+}
+
+@mixin h1RuFont {
+  font-family: $ruFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: $primary-color;
+
+    @media(max-width: 414px) {
+    font-size: 1.375rem;
+    }
+}
+
+@mixin container {
+   margin: 0 auto;
+   width: 100vw;
+   max-width: 1160px;
+   overflow: hidden;
+   height: 100%;
+  //  overflow: auto; // только для флоат элементов т.к. они выпадают из контейнеров
+  @media(max-width: 1270px) {
+    width: 90vw;
+  }
+  @media(max-width: 580px) {
+    width: 98vw;
+  }
+}
+
+@mixin size($w, $h){
+  width: $w;
+  height: $h;
+}
+
+@mixin flex($f-direction, $justify-content, $align-items){
+  display: flex;
+  flex-direction:$f-direction;
+  flex-wrap:wrap;
+  justify-content:$justify-content;
+  align-items: $align-items;
+}
+
+@mixin svg-doubling ($width, $height, $imgpath){
+  width: $width;
+  height: $height;
+  background: url(#{$imgpath});
+}
+
+@mixin visually-hidden {
+  &:not(:focus):not(:active),
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+ }
+}

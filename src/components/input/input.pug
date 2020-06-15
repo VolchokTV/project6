@@ -1,0 +1,12 @@
+block input
+mixin input(label,input, uikit)
+    form.text-field__wrap
+        input(id = input.id
+                class = 'input ' + input.class
+                name = input.name
+                type = input.type
+                placeholder = input.placeholder
+                tabindex = input.tabindex 
+                required = input.req)
+        label.text-field__label(for = label.for class = label.class)
+
